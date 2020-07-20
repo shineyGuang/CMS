@@ -28,7 +28,7 @@ class LoginApi(Resource):
                 "meta": {
                     "msg": "登录成功",
                     "status": 200,
-                    "token": token.decode()
+                    "token": token
                 }
             }
             return ret

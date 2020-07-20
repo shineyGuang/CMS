@@ -37,7 +37,9 @@ class Jwt(object):
         sign = hmac_obj.digest()
         sign_bs = Jwt.b64encode(sign)
 
-        return header_bs + b'.' + payload_bs + b'.' + sign_bs
+        token = header_bs + b'.' + payload_bs + b'.' + sign_bs
+
+        return token.decode()
 
     # jwt解密方法，返回payload
     @staticmethod
